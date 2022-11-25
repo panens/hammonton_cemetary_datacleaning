@@ -12,13 +12,13 @@ df_n= pd.read_csv("new_graveyard_data/halloween2022.csv") #reading in file 2022 
 #in order to combine data into 1 file, we need to make sure that the data is formatted correctly, and reformat if it is not. 
 
 print(df_a.head()) #Since we are interested in data separated by gender, this df is not useful to us at all. 
-df_a = "Not Being Used" # deleting the df just so I do not call it on accident somewhere in the code. 
+
 print("DF_B")
 print(df_b.head()) #date of birth and date of death is in all sorts of formats. so is the gender column 
 print(df_b.tail())
 
 print("DF_N")
-print(df_n.head()) #Icollected only birth year and death year for all the records. I also did not separate first and last name when I collected data. 
+print(df_n.head()) #I collected only birth year and death year for all the records. I also did not separate first and last name when I collected data. 
 print(df_n.tail())
 
 #Since we don't need the first name or the last name for anything specific, we can simply use 1 column, column name, for the entire recorded name. 
@@ -88,7 +88,7 @@ print(df_b.head()) #df_b is clean now.
 
 print("DF_C")
 print(df_c.head()) #date of birth and date of death is in all sorts of formats. so is the gender column 
-print(df_c.tail())
+print(df_c.tail()) #same cleanup needed as for df_b
 
 birth_array = get_only_year("DOB", df_c)
 df_c["BirthYear"] = birth_array
